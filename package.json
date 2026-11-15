@@ -1,0 +1,30 @@
+{
+  "name": "media-studio-showcase-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable Remotion sources for the App Composer / Media Studio public showcase and vertical teaser",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio --no-open --public-dir=./public",
+    "render:showcase": "remotion render MediaStudioShowcase out/media-studio-showcase-1080p.mp4 --public-dir=./public --codec=h264 --crf=18",
+    "render:teaser": "remotion render MediaStudioTeaser out/media-studio-teaser-1080x1920.mp4 --public-dir=./public --codec=h264 --crf=18",
+    "render:scenes": "remotion render MediaStudioScenes out/scenes-1080p.mp4 --public-dir=./public",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/space-grotesk": "^5.2.6",
+    "@remotion/captions": "4.0.506",
+    "@remotion/cli": "4.0.506",
+    "@remotion/fonts": "^4.0.506",
+    "@remotion/media": "4.0.506",
+    "@remotion/transitions": "4.0.506",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.506"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}
