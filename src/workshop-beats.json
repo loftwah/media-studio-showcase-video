@@ -1,0 +1,9 @@
+[
+  { "id": "open", "duration": 3, "title": "Build it. Keep it running.", "detail": "App Composer" },
+  { "id": "studio", "duration": 4, "title": "Give the idea a shape.", "detail": "Motion studies made in Media Studio. Paper workbench and Paperwork." },
+  { "id": "brief", "duration": 5, "title": "Brief to build plan.", "detail": "Mara wants a ceramics profile and a guestbook. Composer turns the brief into a plan for her agent." },
+  { "id": "join", "duration": 6, "title": "Two apps. One project.", "detail": "Here / there accepts postcards and holds them for review. Linkarooie displays her work and links to the guestbook. Each app retains its own source and data." },
+  { "id": "live", "duration": 7, "title": "Open the live build.", "detail": "Follow See approved postcards from Mara’s published Linkarooie profile to her separate Here / there guestbook. Jules’s note is visible after approval." },
+  { "id": "return", "duration": 5, "title": "Return to the same app.", "detail": "Mara featured two links on the live profile. The existing approved postcard stayed published." },
+  { "id": "close", "duration": 4, "title": "See the Creator Hub build.", "detail": "composer.loftwah.com/creator-hub" }
+]
