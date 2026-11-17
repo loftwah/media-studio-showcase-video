@@ -30,7 +30,7 @@ function Beat({ beat }: { beat: (typeof creatorHubBeats)[number] }) {
   if (!("image" in beat)) {
     return (
       <AbsoluteFill style={{ background: orange, color: ink, alignItems: "flex-start", justifyContent: "center", padding: portrait ? 92 : 140 }}>
-        <Img src={staticFile("img/composer-icon.svg")} style={{ width: 116, height: 116, marginBottom: 48 }} alt="" />
+        <Img src={staticFile("img/composer-icon.svg")} style={{ width: 116, height: 116, marginBottom: 48, padding: 14, background: paper, borderRadius: 18 }} alt="" />
         <strong style={{ fontSize: portrait ? 52 : 54, marginBottom: 26 }}>App Composer</strong>
         <div style={{ fontSize: portrait ? 120 : 144, lineHeight: 0.98, fontWeight: 700, maxWidth: 1260, letterSpacing: "-0.035em" }}>{beat.title}</div>
         <div style={{ fontSize: portrait ? 46 : 54, marginTop: 52 }}>{beat.detail}</div>
@@ -70,8 +70,8 @@ function Beat({ beat }: { beat: (typeof creatorHubBeats)[number] }) {
             width: "100%",
             height: "100%",
             objectFit: showPostcard ? "contain" : "cover",
-            objectPosition: `${portrait && isOpening ? 78 : 50}% ${beat.focus}%`,
-            transformOrigin: "50% 18%",
+            objectPosition: `${portrait && showEarlierProfile ? 0 : 50}% ${beat.focus}%`,
+            transformOrigin: portrait && showEarlierProfile ? "0% 18%" : "50% 18%",
             scale: motion,
           }}
         />
