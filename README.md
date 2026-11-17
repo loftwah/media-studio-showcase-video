@@ -100,3 +100,26 @@ from the separately published
 [Creator Hub setup walkthrough](https://composer.loftwah.com/demo/examples/creator-hub#walkthrough-film).
 The paired profile screenshots document a saved presentation change. The
 reference build uses fictional content in the operator’s account.
+
+## Build it. Keep it running.
+
+`ComposerWorkshop` and `ComposerWorkshopPortrait` are 34-second edits of the
+Creator Hub case study, with separate framing for 16:9 and 9:16. The "Two apps"
+sequence shows the app relationship as motion graphics. The recorded click
+from the deployed Linkarooie profile to its published Here / there guestbook is
+a read-only signed-out browser capture from November 17, 2026. The two real
+profile captures in the return shot come from different days.
+
+```sh
+npx remotion render ComposerWorkshop out/workshop-wide.mp4 --scale=0.66666667 --crf=19 --audio-bitrate=160k
+npx remotion render ComposerWorkshopPortrait out/workshop-portrait.mp4 --scale=0.66666667 --crf=19 --audio-bitrate=160k
+node scripts/workshop-transcript.mjs
+```
+
+The owner-supplied App Composer workshop card opens the cut. Media Studio's
+[Paperwork motion study](https://media.loftwah.com/p/1qjHzSyIrIAQ4Zuk) and
+[Paper workbench motion study](https://media.loftwah.com/p/IZQJamDc5xiMsLG7)
+are short, muted cutaways. Neither depicts the Creator Hub workflow.
+[Pixel Box Theory](https://fm.loftwah.com/album/cartridge-funk/) by LoftwahFM
+supplies the instrumental track, excerpted from 00:08 with head and tail fades.
+Scene labels and the transcript are generated from `src/workshop-beats.json`.
