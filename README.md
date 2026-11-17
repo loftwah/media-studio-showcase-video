@@ -80,3 +80,23 @@ for shot selection, and the local `probe.py` / `look.py` tools from
 [ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill/tree/f1c97cbffeac71b8fdfca2f790ceb00db3bcce65)
 for the export review. Human listening and publication approval are tracked
 in Studio #222.
+
+## Creator Hub
+
+`CreatorHubFilm` (16:9) and `CreatorHubPortrait` (9:16) tell the same 32-second
+story with framing for each format. They use silent, typeset guidance and
+edited stills, not a continuous recording of a new build.
+
+```sh
+npx remotion render CreatorHubFilm out/creator-hub-film.mp4 --scale=0.66666667 --mute
+npx remotion render CreatorHubPortrait out/creator-hub-portrait.mp4 --scale=0.66666667 --mute
+node scripts/creator-hub-transcript.mjs
+```
+
+The November 11 and 12 profile and guestbook captures are from the public
+[Creator Hub case study](https://composer.loftwah.com/creator-hub). The opening
+and postcard crops derive from the same guestbook capture. The Init crop is
+from the separately published
+[Creator Hub setup walkthrough](https://composer.loftwah.com/demo/examples/creator-hub#walkthrough-film).
+The paired profile screenshots document a saved presentation change. The
+reference build uses fictional content in the operator’s account.

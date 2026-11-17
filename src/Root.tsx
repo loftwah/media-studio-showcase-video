@@ -2,6 +2,7 @@ import { Composition } from "remotion";
 import { FPS, VERTICAL, WIDE, seconds, showcaseBeats, teaserBeats, teaserRecutBeats } from "./config";
 import { Showcase } from "./Showcase";
 import { Teaser } from "./Teaser";
+import { CreatorHub, creatorHubFrames } from "./CreatorHub";
 import { TeaserRecut } from "./TeaserRecut";
 
 const showcaseFrames = seconds(
@@ -13,6 +14,8 @@ const teaserFrames = seconds(
 
 export const RemotionRoot: React.FC = () => (
   <>
+    <Composition id="CreatorHubFilm" component={CreatorHub} durationInFrames={creatorHubFrames} fps={FPS} {...WIDE} />
+    <Composition id="CreatorHubPortrait" component={CreatorHub} durationInFrames={creatorHubFrames} fps={FPS} {...VERTICAL} />
     <Composition
       id="MediaStudioShowcase"
       component={Showcase}
