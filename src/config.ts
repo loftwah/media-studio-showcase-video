@@ -55,3 +55,15 @@ export const teaserBeats = {
 } as const;
 
 export const seconds = (value: number) => Math.round(value * FPS);
+
+export const teaserRecutBeats = [
+  { kind: "result", from: 0, to: 5, title: "Your studio. Your work.", detail: "Low Tide · LoftwahFM" },
+  { kind: "brief", from: 5, to: 12, title: "Start with one brief.", detail: "Set out what your studio should do in App Composer." },
+  { kind: "library", from: 12, to: 19, title: "Keep every take.", detail: "Your media library runs on your Cloudflare account." },
+  { kind: "publish", from: 19, to: 25, title: "Share the one you choose.", detail: "The published work has its own credited page." },
+  { kind: "end", from: 25, to: 30, title: "Build your own Media Studio.", detail: "composer.loftwah.com/media-studio/tutorial" },
+] as const;
+
+export const teaserRecutCaptions: Caption[] = teaserRecutBeats.map(({ from, to, title, detail }) => ({
+  from, to, text: `${title}\n${detail}`,
+}));

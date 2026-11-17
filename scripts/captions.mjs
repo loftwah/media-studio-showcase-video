@@ -6,7 +6,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const { showcaseCaptions, teaserCaptions } = await import("../src/config.ts");
+const { showcaseCaptions, teaserCaptions, teaserRecutCaptions } = await import("../src/config.ts");
 
 const stamp = (seconds, separator) => {
   const ms = Math.round(seconds * 1000);
@@ -47,3 +47,6 @@ await write("media-studio-showcase.txt", transcript(showcaseCaptions, "Build an 
 await write("media-studio-teaser.srt", srt(teaserCaptions));
 await write("media-studio-teaser.vtt", vtt(teaserCaptions));
 await write("media-studio-teaser.txt", transcript(teaserCaptions, "Build an owned Media Studio · 30s vertical teaser"));
+await write("media-studio-teaser-recut.srt", srt(teaserRecutCaptions));
+await write("media-studio-teaser-recut.vtt", vtt(teaserRecutCaptions));
+await write("media-studio-teaser-recut.txt", transcript(teaserRecutCaptions, "Media Studio vertical recut"));

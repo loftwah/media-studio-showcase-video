@@ -10,7 +10,9 @@
     "render:showcase": "remotion render MediaStudioShowcase out/media-studio-showcase-1080p.mp4 --public-dir=./public --codec=h264 --crf=18",
     "render:teaser": "remotion render MediaStudioTeaser out/media-studio-teaser-1080x1920.mp4 --public-dir=./public --codec=h264 --crf=18",
     "render:scenes": "remotion render MediaStudioScenes out/scenes-1080p.mp4 --public-dir=./public",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "render:teaser-recut": "remotion render MediaStudioTeaserRecut out/media-studio-teaser-recut.mp4 --public-dir=./public --codec=h264 --crf=18 --image-format=png --color-space=bt709",
+    "prerender:teaser-recut": "node scripts/prepare-teaser-recut.mjs"
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^5.2.6",
